@@ -34,13 +34,47 @@ const formatCurrentWeather = (data) => {
     speed,
     details,
     icon: iconUrlFromCode(icon),
-    formattedLocalTime: formatToLocalTime(dt, timezone)
+    formattedLocalTime: formatToLocalTime(dt, timezone),
+    dt,
+    timezone,
+    lat,
+    lon
   };
 };
 
+const formatForecastWeather = (secs, offset, data) => {
+  // Hourly forecast
+  const hourly = data
+    .filter(f => f.dt > secs)
+    .slice(0, 5)
+    .map(f => ({
+      temp: f.main.temp,
+      title: formatToLocalTime(f.dt, offset, 'hh:mm a'),
+      icon: iconUrlFromCode(f.weather[0].icon),
+      date: f.dt_txt,
+    }));
+
+  // Daily forecast 
+  const daily= data.filter((f) => f.dt_txt.slice(-8) === "00:00:00").map(f => ({
+    temp: f.main.temp,
+    title: formatToLocalTime(f.dt, offset, "ccc"),
+    icon: iconUrlFromCode(f.weather[0].icon),
+    date: f.dt_txt,
+  }))
+
+  return { hourly, daily};
+}
+
 const getFormattedWeatherData = async (searchParams) => {
-  const formattedCurrentWeather = await getWeatherData('weather', searchParams).then(formatCurrentWeather);
-  return { ...formattedCurrentWeather };
+  const formattedCurrentWeather = await getWeatherData('weather', searchParams)
+    .then(formatCurrentWeather);
+
+  const { dt, lat, lon, timezone } = formattedCurrentWeather;
+
+  const formattedForecastWeather = await getWeatherData('forecast', { lat, lon, units: searchParams.units })
+    .then((d) => formatForecastWeather(dt, timezone, d.list));
+
+  return { ...formattedCurrentWeather, ...formattedForecastWeather };
 };
 
 export default getFormattedWeatherData;
