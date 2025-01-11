@@ -66,7 +66,7 @@ const TempAndDetails = () => {
 
       <div className="flex flex-row items-center justify-between py-3">
         <img
-          src="https://openweathermap.org/img/wn/10d@2x.png"
+          src="https://openweathermap.org/img/wn/01d@2x.png"
           alt="weather icon"
           className="w-20"
         />
