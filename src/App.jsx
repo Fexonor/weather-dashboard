@@ -43,8 +43,10 @@ function App() {
   }
 
   return (
-      <div className={`mx-auto max-w-screen-lg mt-4 py-5 px-4 sm:px-8 md:px-16 lg:px-32 bg-gradient-to-br shadow-xl shadow-gray-400 ${formatBackground()}`}>
-
+ 
+      <div
+            className={`w-full min-h-screen mx-auto py-5 px-2 sm:px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-48 bg-gradient-to-br shadow-xl shadow-gray-400 ${formatBackground()} text-white`}
+          >
       <TopButtons setQuery={setQuery} />
       <Inputs setQuery={setQuery} setUnits={setUnits} />
 
