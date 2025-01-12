@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Weather Dashboard
 
 Welcome to the Weather Dashboard! This application provides real-time weather information and forecasts for cities around the world.
@@ -19,3 +20,4 @@ Check out the live demo: [Weather Dashboard](https://weather-dashboard-ebon-one.
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/weather-dashboard.git
+
