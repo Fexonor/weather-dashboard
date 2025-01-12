@@ -12,8 +12,12 @@ const getWeatherData = (infoType, searchParams) => {
 
 const iconUrlFromCode = (icon) => `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
-const formatToLocalTime = (secs, offset, format = "cccc, dd LLL yyyy' | Local time:' hh:mm a") => 
-  DateTime.fromSeconds(secs).setZone(offset).toFormat(format);
+const formatToLocalTime = (
+  secs,
+  offset,
+  format = "cccc, dd LLL yyyy' | Local Time:' h:mm a"
+) => DateTime.fromSeconds(secs + offset, { zone: "utc" }).toFormat(format);
+
 
 const formatCurrentWeather = (data) => {
   const { coord: { lat, lon }, main: { temp, feels_like, temp_min, temp_max, humidity },

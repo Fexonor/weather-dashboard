@@ -21,7 +21,7 @@ function TopButtons({setQuery}) {
     },
       {
       id: 5,
-      name: 'Tornoto'
+      name: 'Berlin'
     }
   ]
 
