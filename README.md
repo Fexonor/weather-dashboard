@@ -29,3 +29,6 @@ Check out the live demo: [Weather Dashboard](https://weather-dashboard-ebon-one.
 
 - OpenWeatherMap API
 
+## About
+
+This project was created as part of my capstone project for ALX SE Cohort 2 graduation.
