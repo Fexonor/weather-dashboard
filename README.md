@@ -1,4 +1,4 @@
-Weather Dashboard
+#Weather Dashboard
 
 A sleek and responsive weather application built with React.js and Tailwind CSS. This app allows users to search for real-time weather data of any city worldwide.
 
