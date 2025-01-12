@@ -1,8 +1,21 @@
-# React + Vite
+# Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Weather Dashboard! This application provides real-time weather information and forecasts for cities around the world.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Current weather data for any city
+- 3-hour step forecast and daily forecast
+- Weather details: temperature, humidity, wind speed, sunrise, and sunset times
+- Dynamic background based on weather
+- Unit conversion between Celsius and Fahrenheit
+
+## Live Demo
+
+Check out the live demo: [Weather Dashboard](https://weather-dashboard-ebon-one.vercel.app/)
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/weather-dashboard.git
