@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Weather Dashboard
 
 Welcome to the Weather Dashboard! This application provides real-time weather information and forecasts for cities around the world.
@@ -15,9 +15,17 @@ Welcome to the Weather Dashboard! This application provides real-time weather in
 
 Check out the live demo: [Weather Dashboard](https://weather-dashboard-ebon-one.vercel.app/)
 
-## Installation
+## Technologies Used
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/weather-dashboard.git
+- React
+
+- JavaScript (ES6+)
+
+- Tailwind CSS
+
+- Luxon
+
+- React Toastify
+
+- OpenWeatherMap API
 
